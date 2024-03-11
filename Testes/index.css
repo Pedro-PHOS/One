@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #131313;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(162.22, 39%, 41%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(0.00, 0%, 6%) 0, transparent 55%);
+
+    
+}
+
+.card {
+    backdrop-filter: blur(4px) saturate(200%);
+    -webkit-backdrop-filter: blur(4px) saturate(200%);
+    background-color: rgba(30, 30, 32, 0.65);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    align-self: center;
+    color: white;
+}
