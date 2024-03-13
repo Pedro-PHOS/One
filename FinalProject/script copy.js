@@ -2,87 +2,41 @@ const result = document.getElementById("result");
 
 const noresult = document.getElementById("div_noresult");
 
-let frase = "";
-
-
-function GetText(){
-
-    const input = document.getElementById("text_input").value.toLowerCase();
-
-    letras = input.split("");
-
-};
 
 function Criptografar(){
 
-    const chave = {
-        "a" : "ai",
-        "e" : "enter",
-        "i" : "imes",
-        "o" : "ober",
-        "u" : "ufat",
-    }
+    const input = document.getElementById("text_input").value.toLowerCase();
 
-    GetText()
-
-    letras.forEach(letra => {
-
-        if(letra != " "){
-           if(letra in chave){
-                frase += chave[letra];
-           }
-
-           else{
-                frase += letra;
-           }
-        }
-        
-        console.log(frase);
-    });
-
-    if(frase != ""){
+    cripto = input
+    .replace(/a/g, "ai")
+    .replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat");
+    
+    if(cripto != ""){
 
         noresult.innerHTML = "";
 
-        result.innerHTML = frase;
+        result.innerHTML = cripto;
     }
-
-    frase = "";
 };
 
 function Descriptografar(){
 
-    const chave = {
-        "ai" : "a",
-        "enter" : "e",
-        "imes" : "i",
-        "ober" : "o",
-        "ufat" : "u",
-    }
+    const input = document.getElementById("text_input").value.toLowerCase();
 
-    GetText()
+    descripto = input
+        .replace(/ai/g, "a")
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
 
-    letras.forEach(letra => {
-
-        if(letra != " "){
-           if(frase in chave){
-                frase += chave[letra];
-           }
-
-           else{
-                frase += letra;
-           }
-        }
-        
-        console.log(frase);
-    });
-
-    if(frase != ""){
+    if(descripto != ""){
 
         noresult.innerHTML = "";
 
-        result.innerHTML = frase;
+        result.innerHTML = descripto;
     }
-
-    frase = "";
 };

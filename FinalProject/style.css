@@ -104,7 +104,21 @@ body{
 #div_result{
     height: 95%;
     width: 90%;
+}
 
+#result{
+    padding: 1rem;
+
+}
+
+#btn_copiar{
+    display: none;
+    height: 10%;
+    width: 80% ;
+    border-radius: 20px;
+    border: #0A3871 1px solid;
+    color: #0A3871;
+    cursor:pointer;
 }
 
 #div_noresult{
@@ -176,6 +190,10 @@ body{
     #div_left{
         width: 85%;
         height: 25vh;
+    }
+
+    #result{
+        padding: 0.5rem;
     }
 
     #div_noresult img{
