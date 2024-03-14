@@ -24,8 +24,6 @@ function Criptografar(){
 
     letras = input.split("");
 
-    const mapeamento = {}
-
     letras.forEach(letra => {
 
         if(letra != " "){

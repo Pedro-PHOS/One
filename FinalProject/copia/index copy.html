@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto One</title>
+</head>
+<body>
+    <div id="div_rigth">
+        <img id="img_logo" src="imgs/Logo.png" alt="Logo da Alura">
+
+        <textarea id="text_input" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+        
+        <div id="div_warning">
+            <img src="/imgs/bi_exclamation-circle-fill.png" alt="">
+            <p>Apenas letras minusculas e sem ascento.</p>
+        </div>
+
+        <div id="div_btns">
+            <button id="btn_criptografar" onclick= Criptografar()>Criptografar</button>
+
+            <button id="btn_descriptografar" onclick= Descriptografar()>Descriptografar</button>
+        </div>
+    </div>
+
+    <div id="div_left">
+        <div id="div_result">
+            <p id="result"></p>
+            
+            <div id="div_copiar" >
+                <button onclick= Copiar() id="btn_copiar">Copiar</button>
+            </div>
+            
+            <div id="div_noresult">
+                <img src="/imgs/icon.svg" alt="">
+
+                <h1>Nenhuma Mensagem Encontrada</h1>
+
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
