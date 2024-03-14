@@ -6,6 +6,17 @@ const btn_copy = document.getElementById("div_copiar");
 
 let frase = "";
 
+function end(final){
+    if(final != ""){
+        noresult.style.display = "none";
+        result.style.display = "flex";
+
+        result.innerHTML = final;
+
+        btn_copy.style.display = "flex";
+    }
+    frase = "";
+};
 
 function Criptografar(){
 
@@ -41,12 +52,7 @@ function Criptografar(){
         console.log(frase);
     })
 
-    noresult.style.display = "none";
-    result.style.display = "flex";
-
-    result.innerHTML = frase;
-
-    btn_copy.style.display = "flex";
+    end(frase)
 };
 
 function Descriptografar(){
@@ -60,17 +66,9 @@ function Descriptografar(){
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-    if(descripto != ""){
-
-        noresult.style.display = "none";
-        result.style.display = "flex";
-
-        result.innerHTML = descripto;
-
-        btn_copy.style.display = "flex";
-    }
+        end(descripto)
 };
 
-function copiar() {
+function Copiar() {
     navigator.clipboard.writeText(result.innerHTML);
-  }
+};
