@@ -2,24 +2,51 @@ const result = document.getElementById("result");
 
 const noresult = document.getElementById("div_noresult");
 
+const btn_copy = document.getElementById("div_copiar");
+
+let frase = "";
+
 
 function Criptografar(){
 
     const input = document.getElementById("text_input").value.toLowerCase();
 
-    cripto = input
-    .replace(/a/g, "ai")
-    .replace(/e/g, "enter")
-    .replace(/i/g, "imes")
-    .replace(/o/g, "ober")
-    .replace(/u/g, "ufat");
-    
-    if(cripto != ""){
+    letras = input.split("");
 
-        noresult.innerHTML = "";
+    letras.forEach(letra => {
 
-        result.innerHTML = cripto;
-    }
+        if(letra != " "){
+            if(letra == "a"){
+                letra = "ai"
+            }
+
+            if(letra == "e"){
+                letra = "enter"
+            }
+
+            if(letra == "i"){
+                letra = "imes"
+            }
+
+            if(letra == "o"){
+                letra = "ober"
+            }
+
+            if(letra == "u"){
+                letra = "ufat"
+            }
+        }
+
+        frase += letra;
+        console.log(frase);
+    })
+
+    noresult.style.display = "none";
+    result.style.display = "flex";
+
+    result.innerHTML = frase;
+
+    btn_copy.style.display = "flex";
 };
 
 function Descriptografar(){
@@ -35,8 +62,15 @@ function Descriptografar(){
 
     if(descripto != ""){
 
-        noresult.innerHTML = "";
+        noresult.style.display = "none";
+        result.style.display = "flex";
 
         result.innerHTML = descripto;
+
+        btn_copy.style.display = "flex";
     }
 };
+
+function copiar() {
+    navigator.clipboard.writeText(result.innerHTML);
+  }
