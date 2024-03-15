@@ -2,19 +2,26 @@ const result = document.getElementById("result");
 
 const noresult = document.getElementById("div_noresult");
 
-const btn_copy = document.getElementById("div_copiar");
+const div_copy = document.getElementById("div_copy");
 
 let frase = "";
 
-function end(final){
-    if(final != ""){
+function Show(funcao){
+    if(funcao != ""){
         noresult.style.display = "none";
         result.style.display = "flex";
 
-        result.innerHTML = final;
+        result.innerHTML = funcao;
 
-        btn_copy.style.display = "flex";
+        div_copy.style.display = "flex";
     }
+
+    else{
+        noresult.style.display = "flex";
+        result.style.display = "none";
+        div_copy.style.display = "none";
+    };
+
     frase = "";
 };
 
@@ -54,7 +61,7 @@ function Criptografar(){
         console.log(frase);
     })
 
-    end(frase)
+    Show(frase)
 };
 
 function Descriptografar(){
@@ -68,7 +75,7 @@ function Descriptografar(){
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-        end(descripto)
+        Show(descripto)
 };
 
 function Copiar() {
