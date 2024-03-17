@@ -192,17 +192,21 @@ textarea::placeholder {
     }
 
     #right-section {
-        width: 100%;
+        width: 90%;
         height: 64vh;
     }
 
     #logo-image {
-        width: 70px;
+        width: 7ch;
     }
 
     #text-input {
-        height: 80%;
+        height: 60%;
         width: 80%;
+    }
+
+    textarea::placeholder {
+        font-size: medium;
     }
 
     #warning-message {
