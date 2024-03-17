@@ -176,7 +176,7 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .universe-background{
         flex-direction: column;
     }
