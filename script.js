@@ -69,7 +69,7 @@ function copyText() {
 window.onload = function() {
     var universe = document.querySelector(".universe-background");
 
-    if(window.innerWidth < 600){
+    if(window.innerWidth < 800){
         var starCount = 200;
     }
 
