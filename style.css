@@ -193,11 +193,11 @@ textarea::placeholder {
 
     #right-section {
         width: 90%;
-        height: 64vh;
+        height: 65%;
     }
 
     #logo-image {
-        width: 7ch;
+        width: 60px;
     }
 
     #text-input {
@@ -228,7 +228,7 @@ textarea::placeholder {
 
     #left-section {
         width: 85%;
-        height: 25vh;
+        height: 25%;
     }
 
     #result-text {
