@@ -7,37 +7,36 @@
     <title>Projeto One</title>
 </head>
 <body>
-    <div id="div_rigth">
-        <img id="img_logo" src="imgs/Logo.png" alt="Logo da Alura">
+    <div class="universe-background">
+        <div id="right-section">
+            <img id="logo-image" src="imgs/Logo.png" alt="Logo da Alura">
 
-        <textarea id="text_input" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
-        
-        <div id="div_warning">
-            <img src="/imgs/bi_exclamation-circle-fill.png" alt="">
-            <p>Apenas letras minusculas e sem ascento.</p>
-        </div>
-
-        <div id="div_btns">
-            <button id="btn_criptografar" onclick= Criptografar()>Criptografar</button>
-
-            <button id="btn_descriptografar" onclick= Descriptografar()>Descriptografar</button>
-        </div>
-    </div>
-
-    <div id="div_left">
-        <div id="div_result">
-            <p id="result"></p>
+            <textarea id="text-input" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
             
-            <div id="div_copy" >
-                <button onclick= Copiar() id="btn_copy">Copiar</button>
+            <div id="warning-message">
+                <img src="/imgs/bi_exclamation-circle-fill.png" alt="">
+                <p>Apenas letras minúsculas e sem acento.</p>
             </div>
-            
-            <div id="div_noresult">
-                <img src="/imgs/icon.svg" alt="">
 
-                <h1>Nenhuma Mensagem Encontrada</h1>
+            <div id="buttons-section">
+                <button id="encrypt-button" onclick="encryptText()">Criptografar</button>
+                <button id="decrypt-button" onclick="decryptText()">Descriptografar</button>
+            </div>
+        </div>
 
-                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <div id="left-section">
+            <div id="result-section">
+                <p id="result-text"></p>
+                
+                <div id="copy-section">
+                    <button onclick="copyText()" id="copy-button">Copiar</button>
+                </div>
+                
+                <div id="no-result-section">
+                    <img src="/imgs/icon.svg" alt="">
+                    <h1>Nenhuma Mensagem Encontrada</h1>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
             </div>
         </div>
     </div>
