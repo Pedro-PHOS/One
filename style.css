@@ -189,6 +189,7 @@ textarea::placeholder {
 @media (max-width: 600px) {
     .universe-background{
         flex-direction: column;
+        justify-content:space-around;
     }
 
     #right-section {
