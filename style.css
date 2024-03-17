@@ -54,6 +54,10 @@
     outline: none;
 }
 
+textarea::placeholder {
+    color: #ffffff;
+}
+
 #warning-message {
     display: flex;
     align-items: center;
@@ -80,9 +84,12 @@
     width: 40%;
     border-radius: 20px;
     border: #eeeeee 1px solid;
-    background-color: #0A3871;
+    background-image: linear-gradient(to bottom right, #000000, #0A3871);
     color: #ffffff;
     cursor: pointer;
+    z-index: -1;
+    font-size:medium;
+    font-weight: 600;
 }
 
 #decrypt-button {
@@ -90,9 +97,12 @@
     width: 40%;
     border-radius: 20px;
     border: #eeeeee 1px solid;
-    background-color: #0A3871;
+    background-image: linear-gradient(to bottom right,#0A3871, #3a3a3a);
     color: #ffffff;
     cursor: pointer;
+    z-index: -1;
+    font-size: medium;
+    font-weight: 600;
 }
 
 #left-section {
