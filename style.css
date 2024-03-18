@@ -87,7 +87,6 @@ textarea::placeholder {
     background-image: linear-gradient(to bottom right, #000000, #0A3871);
     color: #ffffff;
     cursor: pointer;
-    z-index: -1;
     font-size:medium;
     font-weight: 600;
 }
@@ -100,7 +99,6 @@ textarea::placeholder {
     background-image: linear-gradient(to bottom right,#0A3871, #3a3a3a);
     color: #ffffff;
     cursor: pointer;
-    z-index: -1;
     font-size: medium;
     font-weight: 600;
 }
@@ -181,7 +179,7 @@ textarea::placeholder {
 
 @keyframes twinkle {
     0% { opacity: 1; }
-    50% { opacity: 0.3;}
+    50% { opacity: 0.2;}
     100% { opacity: 1; }
 }
 
